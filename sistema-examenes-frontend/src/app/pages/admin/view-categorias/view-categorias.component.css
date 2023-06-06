@@ -1,0 +1,30 @@
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 16px;
+  }
+  
+  .category-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  .category-icon {
+    margin-right: 16px;
+  }
+  
+  .category-details {
+    flex-grow: 1;
+  }
+  
+  .category-title {
+    font-weight: bold;
+  }
+  
+  .category-description {
+    color: #757575;
+  }
+  
