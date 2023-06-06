@@ -1,3 +1,8 @@
-.example-spacer{
-  flex: 1 1 auto;
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-button {
+  margin-left: 10px;
 }

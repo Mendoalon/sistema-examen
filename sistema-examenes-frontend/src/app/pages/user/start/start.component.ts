@@ -100,23 +100,6 @@ export class StartComponent implements OnInit {
         console.log(error);
       }
     )
-    /*this.esEnviado = true;
-    this.preguntas.forEach((p:any) => {
-      if(p.respuestaDada == p.respuesta){
-        this.respuestasCorrectas ++;
-        let puntos = this.preguntas[0].examen.puntosMaximos/this.preguntas.length;
-        this.puntosConseguidos += puntos;
-      }
-
-      if(p.respuestaDada.trim() != ''){
-        this.intentos ++;
-      }
-    });
-
-    console.log("Respuestas correctas : " + this.respuestasCorrectas);
-    console.log("Puntos conseguidos : " + this.puntosConseguidos);
-    console.log("Intentos : " + this.intentos);
-    console.log(this.preguntas);*/
   }
 
   obtenerHoraFormateada(){

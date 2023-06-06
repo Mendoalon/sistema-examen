@@ -1,49 +1,22 @@
-<mat-toolbar color="primary">
-  <a
-    [routerLink]="'/'"
-    mat-icon-button
-    class="example-icon"
-    arial-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu_books</mat-icon>
-  </a>
-  <span>Portal de exámenes</span>
-  <span class="example-spacer"></span>
-  <a
-    *ngIf = "!isLoggedIn"
-    [routerLink]="'/login'"
-    mat-icon-button
-    class = "example-icon favorite-icon"
-    aria-label = "Example icon-button with heart icon"
-  >
-    Iniciar sesión
-  </a>
-  <a
-    *ngIf = "!isLoggedIn"
-    [routerLink]="'/signup'"
-    mat-icon-button
-    class="example-icon favorite-icon mr20 ml70"
-    aria-label="Example icon-button with heart icon"
-  >
-    Registrar
-  </a>
-  <a
-    *ngIf = "isLoggedIn"
-    (click) = "logout()"
-    style="margin-right: 50px"
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    Cerrar sesión
-  </a>
-  <button
-    *ngIf = "isLoggedIn && user"
-    mat-button
-    style="margin-right: 10px"
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-    [routerLink] = "'/admin/profile'"
-  >
-  </button>
+<mat-toolbar color="primary" class="toolbar">
+  <div>
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu_books</mat-icon>
+    </a>
+    <span>Portal de exámenes</span>
+  </div>
+  <div>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-button class="example-button" aria-label="Iniciar sesión">
+      Iniciar sesión
+    </a>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-button class="example-button" aria-label="Registrar">
+      Registrar
+    </a>
+    <a *ngIf="isLoggedIn" (click)="logout()" mat-button class="example-button" aria-label="Cerrar sesión">
+      Cerrar sesión
+    </a>
+    <button *ngIf="isLoggedIn && user" mat-button class="example-button" [routerLink]="'/admin/profile'">
+      Perfil
+    </button>
+  </div>
 </mat-toolbar>
